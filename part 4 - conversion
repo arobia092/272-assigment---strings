@@ -1,0 +1,51 @@
+#include <iostream> 
+#include <string>
+
+using namespace std; 
+
+int main() {
+    cout << "enter a number (integer):" << endl;
+    string intStr;
+    getline(cin, intStr);
+    int intNum = stoi(intStr);
+    intNum *= 2;
+    cout << "the integer multiplied by 2 is: " << intNum << endl;
+    
+    // convert to double
+    cout << "enter a number (double):" << endl;
+    string doubleStr;
+    getline(cin, doubleStr);
+    double doubleNum = stod(doubleStr);
+    doubleNum *= 2;
+    cout << "the double multiplied by 2 is: " << doubleNum << endl;
+   
+    //get the length of the double string
+    cout << "the length of the double string is: " << doubleStr.length() << endl;
+    
+    //find the position of the decimal point
+    size_t decimalPos = doubleStr.find('.');
+    if (decimalPos != string::npos) {
+        cout << "the position of the decimal point is: " << decimalPos << endl;
+    } else {
+        cout << "there is no decimal point in the string." << endl;
+    }
+    
+    //get the substring before the decimal point
+    string beforeDecimal = doubleStr.substr(0, decimalPos);
+    cout << "the substring before the decimal point is: " << beforeDecimal << endl;
+
+    //.find() to find the position of the decimal point
+    size_t decimalPos2 = doubleStr.find('.');
+    if (decimalPos2 != string::npos) {
+        cout << "the position of the decimal point is: " << decimalPos2 << endl;
+    } else {
+        cout << "there is no decimal point in the string." << endl;
+    }
+    //get the substring after the decimal point
+    string afterDecimal = doubleStr.substr(decimalPos2 + 1);
+    cout << "the substring after the decimal point is: " << afterDecimal << endl;
+    return 0;
+    
+
+
+}
