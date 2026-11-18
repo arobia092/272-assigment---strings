@@ -1,0 +1,21 @@
+//part 1 
+full name process 
+I declared variable using string fullname then I ask the user the full name. I take the user input by using getline because of the spaces.
+
+then I output the length of the full legth name length using fullname.length(). I then procceed to get the first character. Im thinking index so I output(Cout) the first character by fullname [0]
+
+When i was getting the last charater of the name we uses fullname() -1 because we dont know the length of the name. also fullname()- 1 is what we call method of iteration in discrete math where you uses the last index to get the next one (it is based off of indexing instead of adding)
+
+//prefix and suffix
+you define the variable prefix and suffix  usig string prefix, string suffix 
+its basically  the same logic but pre fix you have to do fullname = prefix + because it goes before we are also using the adding opperator to add things to the fullname we have 
+
+then you print the modified name at the end
+
+
+//part 2 word search 
+
+
+//part 3 
+
+//part 4 
