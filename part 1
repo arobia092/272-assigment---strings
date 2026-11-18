@@ -1,1 +1,36 @@
+#include <iostream>
+#include <string>
 
+using namespace std;
+
+int main() {
+    //first part full name proceessing
+    string fullname;
+    cout << "enter your full name:" << endl;
+    getline(cin, fullname);
+
+    //get total number of characters in the string
+    cout << "your name has " << fullname.length() << " characters." << endl;
+    
+    //get the first character of the string
+    cout << "the first character of your name is: " << fullname[0] << endl;
+
+    //get the last character of the string
+    cout << "the last character of your name is: " << fullname[fullname.length() - 1] << endl;
+
+    //add a prefix to the string
+    cout << "would you like Mr. or Ms." << endl;
+    string prefix;
+    getline(cin, prefix);
+    fullname = prefix + " " + fullname;
+    cout << "your name is now: " << fullname << endl;
+
+    //add a suffix to the string
+    cout << "would you like to add a suffix (Jr., Sr., III, etc.)" << endl;
+    string suffix;
+    getline(cin, suffix);
+    fullname = fullname + " " + suffix;
+
+    //print the modified name
+    cout << "your final name is: " << fullname << endl;
+return 0;
