@@ -1,0 +1,25 @@
+//part 3 case sensitivity
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    cout << " enter two words to compare for case sensitivity:" << endl;
+    string word1, word2;
+    getline(cin, word1);
+    getline(cin, word2);
+    //compare ignoring uppercase and lowercase
+    if (word1 == word2) {
+        cout << "the words are the same." << endl;
+    } else {
+        cout << "the words are different." << endl;
+    }
+    
+    if (word1.compare(word2) == 0) {
+        cout << "the words are equal (case sensitive)." << endl;
+    } else {
+        cout << "the words are not equal (case sensitive)." << endl;
+    }
+    return 0;
+}
