@@ -1,1 +1,22 @@
+#include <iostream>
+#include <string>
 
+using namespace std; 
+
+int main() {
+    cout << "enter an sentence:" << endl;
+    string sentence;
+    getline(cin, sentence);
+
+    cout << "enter a word to search for in the sentence:" << endl;
+    string word;
+    getline(cin, word);
+    
+    size_t found = sentence.find(word);
+    if (found != string::npos) {
+        cout << "the word '" << word << "' was found at position " << found << endl;
+    } else {
+        cout << "the word '" << word << "' was not found in the sentence." << endl;
+    }
+    return 0;
+}
